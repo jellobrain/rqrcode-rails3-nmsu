@@ -1,12 +1,8 @@
-source "http://rubygems.org"
+# frozen_string_literal: true
 
-gem "rails", ">= 3.0.0"
-gem "capybara", ">= 0.4.0"
-gem "sqlite3"
+source "https://rubygems.org"
 
-gem "rqrcode"
-gem "mini_magick"
+# Specify your gem's dependencies in rqrcode-rails3-nmsu.gemspec
+gemspec
 
-# To use debugger (ruby-debug for Ruby 1.8.7+, ruby-debug19 for Ruby 1.9.2+)
-# gem 'ruby-debug'
-# gem 'ruby-debug19'
+gem "rake", "~> 13.0"

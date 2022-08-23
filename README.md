@@ -1,49 +1,37 @@
-# Render QR codes easily from your Rails 3 application
+# Rqrcode::Rails3::Nmsu
 
-This gem supports rendering either SVG or PNG, JPEG, and GIF formats.
+Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/rqrcode/rails3/nmsu`. To experiment with that code, run `bin/console` for an interactive prompt.
 
-SVG, because of it's vector nature, will scale easily when intended for print. Offering QR endpoints enables others to integrate with your service in possibly interesting ways.
+TODO: Delete this and the text above, and describe your gem
 
 ## Installation
 
-Add the following to your `Gemfile`.
+Install the gem and add to the application's Gemfile by executing:
 
-    gem 'rqrcode-rails3'
+    $ bundle add rqrcode-rails3-nmsu
 
-If you want to use the PNG, JPEG or GIF format, you will have to have **ImageMagick** installed on your system.
-You will also want to add the **mini_magick** gem to your application's `Gemfile`.
+If bundler is not being used to manage dependencies, install the gem by executing:
 
-    gem 'mini_magick'
+    $ gem install rqrcode-rails3-nmsu
 
-## How to use
+## Usage
 
-In your controller actions, you could return a QR code that links to the current page like this:
+TODO: Write usage instructions here
 
-```ruby
-respond_to do |format|
-  format.html
-  format.svg  { render :qrcode => request.url, :level => :l, :unit => 10 }
-  format.png  { render :qrcode => request.url }
-  format.gif  { render :qrcode => request.url }
-  format.jpeg { render :qrcode => request.url }
-end
-```
-  
-#### Options:
+## Development
 
-* `:size`   – This controls how big the QR Code will be. Smallest size will be chosen by default. Set to maintain consistent size.
-* `:level`  – The error correction level, can be:
-  * Level `:l` 7%  of code can be restored
-  * Level `:m` 15% of code can be restored
-  * Level `:q` 25% of code can be restored
-  * Level `:h` 30% of code can be restored (default :h) 
-* `:offset` – Padding around the QR Code (e.g. 10)
-* `:unit`   – How many pixels per module (e.g. 11)
-* `:fill`   – Background color (e.g "ffffff" or :white)
-* `:color`  – Foreground color for the code (e.g. "000000" or :black)
-  
-## About
+After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
 
-This project was inspired by the first chapter in José Valim's book [Crafting Rails Applications](http://pragprog.com/titles/jvrails/crafting-rails-applications)
+To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
 
-QR codes are encoded by [rqrcode](https://github.com/whomwah/rqrcode)
+## Contributing
+
+Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/rqrcode-rails3-nmsu. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/rqrcode-rails3-nmsu/blob/master/CODE_OF_CONDUCT.md).
+
+## License
+
+The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+
+## Code of Conduct
+
+Everyone interacting in the Rqrcode::Rails3::Nmsu project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/rqrcode-rails3-nmsu/blob/master/CODE_OF_CONDUCT.md).

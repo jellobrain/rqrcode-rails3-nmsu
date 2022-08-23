@@ -15,7 +15,7 @@ module RQRCode
           unit    = options[:unit]        || 11
 
           # height and width dependent on offset and QR complexity
-          dimension = (qrcode.module_count*unit) + (2*offset)
+          dimension = (qrcode.module.count*unit) + (2*offset)
 
           xml_tag   = %{<?xml version="1.0" standalone="yes"?>}
           open_tag  = %{<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events" width="#{dimension}" height="#{dimension}">}
@@ -28,7 +28,7 @@ module RQRCode
               y = c*unit + offset
               x = r*unit + offset
 
-              next unless qrcode.is_dark(c, r)
+              next unless qrcode.modules[c][r]
               tmp << %{<rect width="#{unit}" height="#{unit}" x="#{x}" y="#{y}" style="fill:##{color}"/>}
             end 
             result << tmp.join

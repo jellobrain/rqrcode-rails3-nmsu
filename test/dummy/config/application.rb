@@ -7,7 +7,7 @@ require "action_view/railtie"
 require "action_mailer/railtie"
 
 Bundler.require
-require "rqrcode-rails3"
+require "rqrcode-rails3-nmsu"
 
 module Dummy
   class Application < Rails::Application
