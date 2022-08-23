@@ -1,3 +1,7 @@
+## 0.1.8 2022-08-23
+### minor enhancements to stop code breaking
+  * Refactor render code into callable function - ([@jellobrain][])
+
 ## 0.1.7 2013-11-19
 ### minor enhancements
   * Refactor render code into callable function - ([@mattconnolly][])
